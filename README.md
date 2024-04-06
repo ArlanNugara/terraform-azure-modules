@@ -1,2 +1,93 @@
-# terraform-azure-modules
-Modules for Azure Landing Zone Deployment
+# Introduction
+
+**To be filled**
+
+# List of Modules
+
+- [Key Vault](./modules/key_vault/README.md)
+    - [Certificates](./modules/key_vault/certificates/README.md)
+    - [Keys](./modules/key_vault/keys/README.md)
+    - [Secrets](./modules/key_vault/secrets/README.md)
+- [Storage Account](./modules/storage_account/README.md)
+    - [Containers](./modules/storage_account/containers/README.md)
+    - [Queues](./modules/storage_account/queues/README.md)
+    - [Shares](./modules/storage_account/shares/README.md)
+    - [Tables](./modules/storage_account/tables/README.md)
+- Compute
+    - Virtual Machines
+        - [Linux Virtual Machines](./modules/virtual_machines/linux/README.md)
+        - [Windows Virtual Machines](./modules/virtual_machines/windows/README.md)
+    - Virtual Machine Scale Set
+        - [Linux VMSS](./modules/virtual_machines/linux/vmss/README.md)
+        - [Windows VMSS](./modules/virtual_machines/windows/vmss/README.md)
+- Network
+    - Connectivity Services
+        - [Vnets](./modules/network/connectivity/vnets/README.md)
+            - [Subnets](./modules/network/connectivity/vnets/subnets/README.md)
+            - [Peering](./modules/network/connectivity/vnets/peerings/README.md)
+        - [Pip](./modules/network/connectivity/pip/README.md)
+        - [Routes](./modules/network/connectivity/routes/README.md)
+            - [Subnet Association](./modules/network/connectivity/routes/association/README.md)
+        - DNS
+            - [DNS Zone](./modules/network/connectivity/dns/dnszone/README.md)
+                - [A Record](./modules/network/connectivity/dns/dnszone/a_record/README.md)
+                    - [Alias Record](./modules/network/connectivity/dns/dnszone/a_record/alias/README.md)
+                - [CNAME Record](./modules/network/connectivity/dns/dnszone/cname_record/README.md)
+                - [PTR Record](./modules/network/connectivity/dns/dnszone/ptr_record/README.md)
+            - [Private DNS Zone](./modules/network/connectivity/dns/private_dnszone/README.md)
+                - [A Record](./modules/network/connectivity/dns/private_dnszone/a_record/README.md)
+                - [CNAME Record](./modules/network/connectivity/dns/private_dnszone/cname_record/README.md)
+                - [PTR Record](./modules/network/connectivity/dns/private_dnszone/ptr_record/README.md)
+                - [VNET Link](./modules/network/connectivity/dns/private_dnszone/vnet_link/README.md)
+        - [Bastions](./modules/network/connectivity/bastions/README.md)
+        - [Virtual WAN](./modules/network/connectivity/vwan/README.md)
+        - [VPN Gateway](./modules/network/connectivity/vpn_gateway/README.md)
+            - [Local Network Gateway](./modules/network/connectivity/vpn_gateway/local_network_gateway/README.md)
+            - [Connection](./modules/network/connectivity/vpn_gateway/connection/README.md)
+        - [Virtual network NAT Gateway](./modules/network/connectivity/nat_gateway/README.md)
+            - Association
+                - [Public IP](./modules/network/connectivity/nat_gateway/associations/pip/README.md)
+                - [Subnet](./modules/network/connectivity/nat_gateway/associations/subnet/README.md)
+        - [Route Server](./modules/network/connectivity/route_server/README.md)
+            - [BGP Connection](./modules/network/connectivity/route_server/bgp_connection/README.md)
+        - [Azure Network Manager](./modules/network/connectivity/network_manager/README.md)
+            - [Network Manager Network Group](./modules/network/connectivity/network_manager/network_group/README.md)
+                - [Network Manager Network Group Member](./modules/network/connectivity/network_manager/network_group/group_member/README.md)
+            - Configuration
+                - [Connectivity](./modules/network/connectivity/network_manager/configuration/connectivity/README.md)
+                - [Security Admin](./modules/network/connectivity/network_manager/configuration/security_admin/README.md)
+                    - [Rule Collection](./modules/network/connectivity/network_manager/configuration/security_admin/rule_collection/README.md)
+                        - [Source Rule](./modules/network/connectivity/network_manager/configuration/security_admin/rule_collection/source_rule/README.md)
+                        - [Destination Rule](./modules/network/connectivity/network_manager/configuration/security_admin/rule_collection/destination_rule/README.md)
+            - [Deployment](./modules/network/connectivity/network_manager/deployment/README.md)
+    - Application Security Services
+        - [Network Security Group](./modules/network/security/nsg/README.md)
+            - [Rules](./modules/network/security/nsg/rules/README.md)
+            - [Subnet Association](./modules/network/security/nsg/association/README.md)
+        - Load Balancer
+            - [Private](./modules/network/security/load_balancer/private/README.md)
+            - [Public](./modules/network/security/load_balancer/public/README.md)
+        - [Firewall](./modules/network/security/firewalls/README.md)
+            - [Policy](./modules/network/security/firewalls/policy/README.md)
+        - [Private Endpoint](./modules/network/security/private_endpoint/README.md)
+    - Application Delivery Services
+        - [Application Gateway](./modules/network/delivery/application_gateway/README.md)
+    - Network Monitoring
+        - [Network Watcher](./modules/network/monitoring/network_watcher/README.md)
+- Policy
+    - [Definition](./modules/policy/definition/README.md)
+    - [Assignment](./modules/policy/assignment/README.md)
+- Identity
+    - Role Based Access Control
+        - [Definition](./modules/identity/rbac/definition/README.md)
+        - Assignment
+            - [Custom](./modules/identity/rbac/assignment/custom/README.md)
+            - [BuiltIn](./modules/identity/rbac/assignment/builtin/README.md)
+- SQL
+    - Synapse
+        - [Workspace](./modules/sql/synapse/workspace/README.md)
+        - [AAD Admin](./modules/sql/synapse/aad_admin/README.md)
+        - [SQL Pool](./modules/sql/synapse/pool/README.md)
+- Diagnostics
+    - [Log Analytics Workspace](./modules/diagnostics/log_analytics_workspace/README.md)
+    - [Diagnostics Settings](./modules/diagnostics/diag_settings/README.md)
